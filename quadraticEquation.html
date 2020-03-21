@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quadratic equation</title>
+    <style>
+        input {
+            width: 50px;
+            text-align: center;
+        }
+
+        hr {
+            text-align: left;
+            margin-right: 80%;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+<p>Выберите действие:</p>
+
+<div>
+    <select id="choice" onchange="way()">
+        <option value="discriminant">Найти корни квадратного уравнения</option>
+        <option value="vietaFormulas">Составить квадратное уравнение с помощью корней</option>
+    </select>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<div id="solveTheQuadraticEquation">
+
+    <input placeholder="кф a" type="number" id="a">
+    <span>x<sup>2</sup>+</span>
+    <input placeholder="кф b" type="number" id="b">
+    <span>x+</span>
+    <input placeholder="кф c" type="number" id="c">
+    <span>=</span>
+    <input disabled type="number" value="0">
+
+    <br>
+    <br>
+
+    <button onclick="discriminant()" type="submit">Найти корни</button>
+
+    <hr>
+
+    <p id="outDiscriminant"></p>
+
+</div>
+
+
+<div id="getTheQuadraticEquation" style="display: none">
+    <span>x<sub>1</sub>=</span>
+    <input type="number" id="x1">
+    <span>x<sub>2</sub>=</span>
+    <input type="number" id="x2">
+
+    <br>
+    <br>
+
+    <button onclick="vietasFormulas()">Составить квадратное уравнение</button>
+
+    <hr>
+
+    <p id="outVietasFormulas"></p>
+</div>
+
+</body>
+</html>
